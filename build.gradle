@@ -3,6 +3,7 @@ import com.vanniktech.maven.publish.SonatypeHost
 plugins {
     id 'java'
     id "com.vanniktech.maven.publish" version "0.28.0"
+    id 'signing' // GPG 서명을 위한 플러그인 추가
 }
 
 java {
@@ -24,12 +25,11 @@ mavenPublishing {
   		name = "DJ Pagination"
         description = "Springboot , Mybatis Web Pagination"
         inceptionYear = "2024"
-        url = "https://github.com/leedongjun1/dj-pagination/tree/main"
+        url = '<https://github.com/leedongjun1/dj-pagination>'
         licenses {
             license {
                 name = "The Apache License, Version 2.0"
-                url = "https://www.apache.org/licenses/LICENSE-2.0.txt"
-                distribution = "https://www.apache.org/licenses/LICENSE-2.0.txt"
+                url = '<https://github.com/leedongjun1/dj-pagination/blob/master/LICENSE>'
             }
         }
         developers {
@@ -51,7 +51,6 @@ repositories {
 
 dependencies {
 	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.3.0'
-    implementation 'org.mybatis:mybatis:3.5.7'
     implementation files("C:/lib/aspectjweaver-1.9.7.jar")
 }
 
