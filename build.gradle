@@ -1,0 +1,57 @@
+import com.vanniktech.maven.publish.SonatypeHost
+
+plugins {
+    id 'java'
+    id "com.vanniktech.maven.publish" version "0.28.0"
+}
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(11)
+	}
+}
+
+tasks.withType(Javadoc) {
+    options {
+        encoding 'UTF-8'
+    }
+}
+mavenPublishing {
+  	publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL)
+  	signAllPublications()
+  	coordinates("io.github.leedongjun1", "dj-pagination", "1.0.0")
+  	pom {
+  		name = "DJ Pagination"
+        description = "Springboot , Mybatis Web Pagination"
+        inceptionYear = "2024"
+        licenses {
+            license {
+                name = "The Apache License, Version 2.0"
+                url = "https://www.apache.org/licenses/LICENSE-2.0.txt"
+                distribution = "https://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        }
+        developers {
+            developer {
+                id = "djlee"
+                name = "DJ Lee"
+            }
+        }
+        scm {
+            connection = 'scm:git:github.com/leedongjun/dj-pagination.git'
+            developerConnection = 'scm:git:ssh://github.com:leedongjun1/dj-pagination.git'
+            url = '<https://github.com/leedongjun1/dj-pagination/tree/master>'
+        }
+    }
+}
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.3.0'
+    implementation 'org.mybatis:mybatis:3.5.7'
+    implementation files("C:/lib/aspectjweaver-1.9.7.jar")
+}
+
+//gradlew publishAllPublicationsToMavenCentralRepository
