@@ -1,4 +1,4 @@
-package io.dj.pagination.vo;
+package io.github.leedongjun1.vo;
 
 import java.util.List;
 

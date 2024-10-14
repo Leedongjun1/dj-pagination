@@ -1,4 +1,4 @@
-package io.dj.pagination.exception;
+package io.github.leedongjun1.exception;
 
 public enum PagingErrorCode {
 	NOT_FOUND_REQUIRED_PARAMETER("001", "필수 파라미터가 누락되었습니다."),

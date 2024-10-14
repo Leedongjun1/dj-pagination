@@ -1,4 +1,4 @@
-package io.dj.pagination.exception;
+package io.github.leedongjun1.exception;
 
 public class PagingException extends RuntimeException{
 	private static final long serialVersionUID = 1L;

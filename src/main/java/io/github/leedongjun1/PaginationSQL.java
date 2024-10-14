@@ -1,4 +1,4 @@
-package io.dj.pagination;
+package io.github.leedongjun1;
 
 public enum PaginationSQL {
 	MARIA_DB("mariadb","%s LIMIT %d, %d"),

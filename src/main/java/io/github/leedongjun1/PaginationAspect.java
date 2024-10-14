@@ -1,4 +1,4 @@
-package io.dj.pagination;
+package io.github.leedongjun1;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -28,10 +28,10 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.jdbc.support.JdbcUtils;
 import org.springframework.stereotype.Component;
 
-import io.dj.pagination.Pagination.PageMode;
-import io.dj.pagination.exception.PagingErrorCode;
-import io.dj.pagination.exception.PagingException;
-import io.dj.pagination.vo.PaginationResult;
+import io.github.leedongjun1.Pagination.PageMode;
+import io.github.leedongjun1.exception.PagingErrorCode;
+import io.github.leedongjun1.exception.PagingException;
+import io.github.leedongjun1.vo.PaginationResult;
 
 @Aspect
 @Component

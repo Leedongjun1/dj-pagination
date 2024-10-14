@@ -1,4 +1,4 @@
-package io.dj.pagination;
+package io.github.leedongjun1;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
